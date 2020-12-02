@@ -21,7 +21,7 @@ body {
   font-family: "Karla", sans-serif;
 }
 .main {
-  width: 48%;
+  width: 50%;
   margin: 180px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -71,11 +71,12 @@ header p {
   color: var(--neutral1LightGray);
 }
 .subscription p {
-  font-size: 1.2em;
+  font-size: 1em;
   color: var(--neutral1LightGray);
 }
 .subscription button {
-  width: 15.5em;
+  width: 100%;
+  max-width: 17em;
   padding: 0.66em;
   color: #fff;
   font-weight: 700;
@@ -93,7 +94,7 @@ header p {
   background-color: #4bbfbe;
   color: var(--neutral1LightGray);
 }
-footer p {
+.main footer p {
   max-width: 22ch;
 }
 .container {
