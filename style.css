@@ -88,7 +88,7 @@ header p {
 .subscription button:focus {
   outline: none;
 }
-main > footer {
+.main > footer {
   grid-area: footer;
   background-color: #4bbfbe;
   color: var(--neutral1LightGray);
