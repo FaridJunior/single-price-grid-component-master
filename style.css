@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  /* Primary */
+  --primary1cyan: hsl(179, 62%, 43%);
+  --primary2brightyellow: hsl(71, 73%, 54%);
+  /* Neutral */
+  --neutral1LightGray: hsl(204, 43%, 93%);
+  --netural2GrayishBlue: hsl(218, 22%, 67%);
+}
+body,
+div,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: var(--neutral1LightGray);
+  font-family: "Karla", sans-serif;
+}
+.main {
+  width: 50%;
+  margin: 300px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "subscription footer";
+  grid-template-rows: 16em 16em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 2px 4px 7px 2px rgba(0, 0, 0, 0.101);
+}
+header {
+  grid-area: header;
+  background-color: #fff;
+}
+header h1 {
+  font-size: 1.4em;
+  color: var(--primary1cyan);
+  margin-bottom: 1.5em;
+}
+header h2 {
+  font-size: 1.2em;
+  color: var(--primary2brightyellow);
+}
+header p {
+  max-width: 58ch;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: var(--netural2GrayishBlue);
+}
+.subscription {
+  grid-area: subscription;
+  background-color: #2fb3b1;
+}
+.subscription h2 {
+  color: #fff;
+  font-size: 1em;
+}
+.subscription h3 strong {
+  font-size: 2em;
+  color: #fff;
+}
+.subscription h3 span {
+  padding-left: 1em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  color: var(--neutral1LightGray);
+}
+.subscription p {
+  font-size: 1.2em;
+  color: var(--neutral1LightGray);
+}
+.subscription button {
+  width: 15.5em;
+  padding: 0.66em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2em;
+  background-color: var(--primary2brightyellow);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 2px 4px 7px 2px rgba(0, 0, 0, 0.101);
+}
+.subscription button:focus {
+  outline: none;
+}
+footer {
+  grid-area: footer;
+  background-color: #4bbfbe;
+  color: var(--neutral1LightGray);
+}
+footer p {
+  max-width: 22ch;
+}
+.container {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 3em;
+  padding-right: 2em;
+}
+@media (max-width: 800px) {
+  .main {
+    width: 90%;
+    margin: 200px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "subscription"
+      "footer";
+    grid-template-rows: 18em 16em 16em;
+  }
+}
